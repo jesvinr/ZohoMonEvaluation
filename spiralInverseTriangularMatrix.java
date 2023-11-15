@@ -27,7 +27,7 @@ public class spiralInverseTriangularMatrix {
                 arr[a][i]=k;
                 k++;
             }
-            a++;c--;
+            a++;c--;b++;
         }
 
         for(int i=0;i<n;i++){
