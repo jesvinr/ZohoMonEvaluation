@@ -32,7 +32,10 @@ public class spiralInverseTriangularMatrix {
 
         for(int i=0;i<n;i++){
             for(int sp=0;sp<i;sp++){
-                System.out.print("  ");
+                if(ld<=9)
+                    System.out.print("  ");
+                else
+                    System.out.println("   ");
             }
 
             for(int j=0;j<n;j++){
