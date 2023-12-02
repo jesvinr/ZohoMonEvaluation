@@ -1,7 +1,9 @@
 import java.util.ArrayList;
 import java.util.Scanner;
 /*
+Find sum of largest continuous subarray.
 input: -2 1 -3 4 -1 2 1 -5 4
+output: 4 -1 2 1
  */
 public class Question1 {
     public static void main(String[] args) {
