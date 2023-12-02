@@ -1,5 +1,7 @@
 import java.util.*;
-
+/*
+Find count of all words in a string.
+*/
 public class Question3 {
 
     public static void main(String[] args) {
