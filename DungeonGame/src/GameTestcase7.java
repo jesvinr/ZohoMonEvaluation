@@ -47,7 +47,7 @@ public class GameTestcase7 {
         List<Integer> res = new ArrayList<>();
 
         // Checking monster can reach adventurer
-        if(game.differenceBetweenMonsterAndAdventurer(row,col,Grow,Gcol,Mrow,Mcol))
+        if(game.differenceBetweenMonsterAndAdventurer(row,col,Grow,Gcol,Mrow,Mcol,tRow,tCol))
         {
             System.out.println("No possible solution");
             System.out.println("Monster will catch you and kill you!!!");
@@ -102,13 +102,17 @@ public class GameTestcase7 {
         return false;
     }
 
-    boolean differenceBetweenMonsterAndAdventurer(int Arow,int Acol,int Mrow,int Mcol,int Grow,int Gcol){
+    boolean differenceBetweenMonsterAndAdventurer(int Arow,int Acol,int Mrow,int Mcol,int Grow,int Gcol,int Trow,int Tcol){
         // steps between gold and adevnturer
         int adGoPath = Math.abs(Arow-Grow)+Math.abs(Acol-Gcol);
 
         // steps between gold and monster
         int monGoPath = Math.abs(Mrow-Grow)+Math.abs(Mcol-Gcol);
-        if(Math.abs(adGoPath-monGoPath)>0){
+
+        // steps between trigger and adventurer
+        int ta = Math.abs(Arow-Trow)+Math.abs(Acol-Tcol);
+        int tm = Math.abs(Mrow-Trow)+Math.abs(Mrow-Tcol);
+        if(Math.abs(adGoPath-monGoPath)>0 || Math.abs(ta-tm)>0){
             return false;
         }
         return true;
